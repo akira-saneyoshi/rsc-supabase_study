@@ -32,3 +32,18 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+
+### Create new Next.js project
+```bash
+# npx create-next-app --example with-tailwindcss rsc-supabase --use-npm
+npx create-next-app@latest --tailwind rsc-supabase --use-npm
+npm i @heroicons/react@2.0.17 @supabase/auth-helpers-nextjs@0.6.1 @supabase/supabase-js@2.21.0 zustand@4.3.8 supabase@1.55.1 date-fns@2.30.0
+```
+### Generate supabase types
+```bash
+npx supabase login
+npx supabase init
+npx supabase link --project-ref your_project_id
+npx supabase gen types typescript --linked > database.types.ts
+```
